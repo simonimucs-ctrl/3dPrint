@@ -1,4 +1,41 @@
-<form name="preventivo" method="POST" data-netlify="true">
-  <input type="hidden" name="prezzo_stimato" id="prezzoFinale" value="0.00">
-  <button type="submit">Invia Richiesta di Preventivo</button>
-</form>
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Preventivi Stampa 3D</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>I Miei Progetti Stampa 3D</h1>
+
+    <div id="progetto_auto">
+        <h2>Modello di Auto Sportiva</h2>
+        <img src="auto.jpg" alt="Stampa 3D Auto">
+
+        <form name="preventivo" method="POST" data-netlify="true">
+
+            <label>Scegli il Colore:</label><br>
+            <select name="colore" onchange="calcolaPrezzo()">
+                <option value="base">Bianco (Base)</option>
+                <option value="rosso">Rosso (+1.50 €)</option>
+                <option value="nero">Nero (+2.00 €)</option>
+            </select><br>
+
+            <label>Quantità (max 10):</label><br>
+            <input type="number" name="quantita" value="1" min="1" max="10" oninput="calcolaPrezzo()"><br>
+            
+            <input type="hidden" name="prezzo_finale" id="prezzoFinale" value="0.00">
+            
+            <input type="hidden" name="prodotto_selezionato" value="Modello Auto Sportiva">
+
+            <p>Prezzo Totale Stimato: <span id="totale_visualizzato">0.00</span> €</p>
+
+            <button type="submit">Invia Richiesta di Preventivo</button>
+
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
