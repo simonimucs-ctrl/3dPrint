@@ -1,1 +1,36 @@
+/* Stile base */
+body {
+    font-family: sans-serif;
+    margin: 40px;
+    background-color: #f4f4f4;
+}
 
+/* Stile per il Modulo di Preventivo */
+form {
+    border: 1px solid #ccc;
+    padding: 20px;
+    background-color: #fff;
+    max-width: 400px;
+    margin-top: 15px;
+}
+
+/* Stile per evidenziare il Prezzo Totale */
+#totale_visualizzato {
+    font-size: 1.8em; /* Rende il testo molto più grande */
+    font-weight: bold;
+    color: #007bff; /* Un bel colore blu */
+    display: inline-block; /* Assicura che funzioni correttamente */
+    min-width: 80px; /* Previene che lo spazio si riduca troppo */
+}
+
+/* Stile per il pulsante di invio */
+button[type="submit"] {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1em;
+    margin-top: 20px;
+    width: 100%;
+}
